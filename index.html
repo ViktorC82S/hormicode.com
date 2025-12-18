@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hormicode</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>Hormicode</h1>
-  <p>Software solutions.</p>
-</body>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hormicode</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Tabler CSS -->
+        <link rel="stylesheet" href="assets/tabler/tabler.min.css">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">-->
+
+        <!-- Custom -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="layout-fluid">
+
+        <div class="page">
+
+            <!-- ================= HEADER ================= -->
+            <header class="navbar navbar-expand-md navbar-light border-bottom">
+                <div class="container-xl">
+
+                    <!-- Brand -->
+                    <a class="navbar-brand" href="#">
+                        <strong>Hormicode</strong>
+                    </a>
+
+                    <!-- Mobile toggle -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Solutions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+
+                            <!-- Dark mode toggle -->
+                            <li class="nav-item">
+                                <a href="?theme=dark"
+                                   class="nav-link px-0 hide-theme-dark"
+                                   data-bs-toggle="tooltip"
+                                   data-bs-placement="bottom"
+                                   aria-label="Enable dark mode"
+                                   title="Enable dark mode">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                         class="icon icon-1">
+                                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                                    </svg>
+                                </a>
+
+                                <a href="?theme=light"
+                                   class="nav-link px-0 hide-theme-light"
+                                   data-bs-toggle="tooltip"
+                                   data-bs-placement="bottom"
+                                   aria-label="Enable light mode"
+                                   title="Enable light mode">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                         class="icon icon-1">
+                                    <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                    </svg>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- ================= PAGE BODY ================= -->
+            <div class="page-wrapper">
+
+                <!-- Scrollable content -->
+                <div class="page-body">
+                    <div class="container-xl">
+
+                        <!-- BODY VACÍO (placeholder) -->
+                        <div class="empty">
+                            <div class="empty-header">Hormicode {...}</div>
+                            <p class="empty-title">Ready to build</p>
+                            <p class="empty-subtitle text-muted">
+                                This area will contain the main content.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= FOOTER ================= -->
+                <footer class="footer footer-transparent border-top">
+                    <div class="container-xl">
+                        <div class="row text-center text-md-start align-items-center">
+                            <div class="col-md-6">
+                                <span class="text-muted">
+                                    © 2025 Hormicode. All rights reserved.
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="#" class="text-muted me-3">Privacy</a>
+                                <a href="#" class="text-muted">Terms</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+
+        <!-- Tabler JS -->
+        <script src="assets/tabler/tabler.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>-->
+
+
+    </body>
 </html>

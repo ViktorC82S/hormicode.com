@@ -1,0 +1,49 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Dec 17, 2025, 8:31:39 PM
+    Author     : victor castro
+*/
+
+html, body {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* MUY IMPORTANTE */
+}
+
+.page-body {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Dark mode toggle: icon-only style */
+#theme-toggle {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] #theme-toggle:hover,
+[data-bs-theme="dark"] #theme-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
