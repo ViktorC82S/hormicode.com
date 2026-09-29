@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 -16 136.00 136.00" role="img" aria-label="Hormicode">
+  <title>Hormicode</title>
+  <defs>
+    <linearGradient id="fav_g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0B5ED7"/>
+      <stop offset="1" stop-color="#3FA9FF"/>
+    </linearGradient>
+    <g id="fav_ant">
+      <ellipse cx="44" cy="84" rx="25" ry="13.5" transform="rotate(-44 44 84)"/>
+      <ellipse cx="71" cy="58" rx="11" ry="8" transform="rotate(-44 71 58)"/>
+      <circle cx="94" cy="36" r="12"/>
+    </g>
+    <mask id="fav_cut" maskUnits="userSpaceOnUse" x="-10" y="-10" width="1000" height="200">
+      <rect x="-10" y="-10" width="1000" height="200" fill="#fff"/>
+      <use href="#fav_ant" fill="#000" stroke="#000" stroke-width="8"/>
+      <!-- crossbar sliver left isolated between abdomen and thorax -->
+      <rect x="62" y="68" width="6" height="10" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="3" y="-16" width="136" height="136" rx="28" fill="#07142B"/>
+  <g fill="#FFFFFF" mask="url(#fav_cut)">
+      <path d="M12 22a6 6 0 0 1 6-6h18v88H12z"/>
+      <rect x="12" y="54" width="70" height="20"/>
+      <path d="M68 16h16a6 6 0 0 1 6 6v82H68z"/>
+  </g>
+  <use href="#fav_ant" fill="url(#fav_g)"/>
+  <g fill="none" stroke="#3FA9FF" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="94,24 100,10 111,5"/>
+    <polyline points="103,28 113,18 122,19"/>
+  </g>
+  <g fill="#3FA9FF">
+    <circle cx="113" cy="4" r="5.2"/>
+    <circle cx="124.5" cy="19" r="5.2"/>
+  </g>
+</svg>

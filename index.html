@@ -1,387 +1,401 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title data-i18n="meta.title">Hormicode — Software diagnosis, repair &amp; modernization</title>
-        <meta name="description"
-              data-i18n-attr="content:meta.description"
-              content="Hormicode helps small and mid-sized businesses take back control of their software: we diagnose, fix and improve the systems you already use — without stopping your business.">
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta_title">Hormicode — Software diagnosis, repair &amp; modernization</title>
+<meta name="description" data-i18n-attr="content:meta_desc"
+      content="Hormicode helps small and mid-sized businesses take back control of their software: we diagnose, fix and improve the systems you already use — without stopping your business.">
 
-        <!-- Open Graph (link previews on LinkedIn, WhatsApp, etc.) -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://hormicode.com/">
-        <meta property="og:title" content="Hormicode — Take back control of your software">
-        <meta property="og:description" content="We diagnose, fix and improve the systems your business already runs on — without stopping operations.">
-        <meta property="og:image" content="https://hormicode.com/assets/img/og-image.jpg">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta name="twitter:card" content="summary_large_image">
+<!-- ===== Favicon ===== -->
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#07142B">
 
-        <!-- Icons -->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
-        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<!-- ===== Open Graph (preview on LinkedIn, WhatsApp, Facebook) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hormicode">
+<meta property="og:url" content="https://hormicode.com/">
+<meta property="og:title" content="Hormicode — Take back control of your software">
+<meta property="og:description" content="We diagnose, fix and improve the systems your business already runs on — without stopping operations.">
+<meta property="og:image" content="https://hormicode.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HCode — Hormicode">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hormicode.com/assets/img/og-image.jpg">
 
-        <!-- Theme: runs before paint to avoid a flash of the wrong theme -->
-        <script src="js/theme.js"></script>
+<!-- Theme first: avoids a flash of the wrong theme -->
+<script src="js/theme.js?v=3"></script>
 
-        <!-- Tabler CSS -->
-        <link rel="stylesheet" href="assets/tabler/tabler.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
 
-        <!-- Custom -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<!-- ============ ICONS (Lucide, ISC license) ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><path d="M8 16h.01M16 16h.01"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+</svg>
 
-    <body>
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo" aria-label="Hormicode">
+      <img src="assets/img/hormicode-wordmark.svg" alt="HCode" class="logo-img on-light" width="117" height="30">
+      <img src="assets/img/hormicode-wordmark-white.svg" alt="HCode" class="logo-img on-dark" width="117" height="30">
+    </a>
 
-        <!-- ================= ICONS (Tabler Icons, MIT) ================= -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-            <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></symbol>
-            <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></symbol>
-            <symbol id="i-world" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></symbol>
-            <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></symbol>
-            <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></symbol>
-            <symbol id="i-adjust" viewBox="0 0 24 24"><path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M6 4v4"/><path d="M6 12v8"/><path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M12 4v10"/><path d="M12 18v2"/><path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M18 4v1"/><path d="M18 9v11"/></symbol>
-            <symbol id="i-search" viewBox="0 0 24 24"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></symbol>
-            <symbol id="i-tool" viewBox="0 0 24 24"><path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5"/></symbol>
-            <symbol id="i-grid-add" viewBox="0 0 24 24"><path d="M4 4h6v6h-6z"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6h-6z"/><path d="M14 17h6m-3 -3v6"/></symbol>
-            <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/></symbol>
-            <symbol id="i-plug" viewBox="0 0 24 24"><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z"/><path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z"/><path d="M3 21l2.5 -2.5"/><path d="M18.5 5.5l2.5 -2.5"/><path d="M10 11l-2 2"/><path d="M13 14l-2 2"/></symbol>
-            <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z"/></symbol>
-            <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10"/></symbol>
-            <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></symbol>
-            <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0 -4 0"/><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"/></symbol>
-        </svg>
+    <nav class="nav-links">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#work" data-i18n="nav_work">Case study</a>
+      <a href="#process" data-i18n="nav_process">How we work</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
 
-        <div class="page">
+    <div class="nav-tools">
+      <button class="icon-btn lang-btn" id="langToggle" type="button"
+              data-i18n-attr="title:lang_title;aria-label:lang_title"
+              title="Cambiar a español" aria-label="Cambiar a español">
+        <svg width="18" height="18"><use href="#i-lang"/></svg><span data-i18n="lang_code">ES</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button"
+              data-i18n-attr="title:theme_title;aria-label:theme_title"
+              title="Light / Dark" aria-label="Light / Dark">
+        <svg class="icon-sun" width="18" height="18"><use href="#i-sun"/></svg>
+        <svg class="icon-moon" width="18" height="18"><use href="#i-moon"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm"><span class="nav-cta-text" data-i18n="nav_cta">Let's talk</span>
+        <svg width="16" height="16"><use href="#i-mail"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
 
-            <!-- ================= HEADER ================= -->
-            <header class="navbar navbar-expand-md sticky-top border-bottom">
-                <div class="container-xl">
+<main id="top">
 
-                    <!-- Brand (provisional mark cropped from the logo concept; replace with SVG when ready) -->
-                    <a class="navbar-brand brand" href="#top">
-                        <img src="assets/img/logo-mark.png" alt="" class="brand-mark" width="32" height="32"> Hormicode
-                    </a>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eyebrow">Diagnosis · Repair · Modernization</span>
+      <h1 data-i18n="hero_title">Take back control<br>of <span class="grad">your software.</span></h1>
+      <p class="lead" data-i18n="hero_lead">We diagnose the systems and web applications your business already runs on, fix what's broken and improve what slows you down — without stopping operations.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <svg width="17" height="17"><use href="#i-mail"/></svg>
+          <span data-i18n="hero_cta1">Tell us about your system</span>
+        </a>
+        <a href="#services" class="btn btn-ghost" data-i18n="hero_cta2">See services</a>
+      </div>
+      <div class="trust">
+        <span><svg width="16" height="16"><use href="#i-check"/></svg><span data-i18n="trust1">10+ years building management systems</span></span>
+        <span><svg width="16" height="16"><use href="#i-check"/></svg><span data-i18n="trust2">No rewrites from scratch</span></span>
+        <span><svg width="16" height="16"><use href="#i-check"/></svg><span data-i18n="trust3">English &amp; Spanish</span></span>
+      </div>
+    </div>
 
-                    <!-- Mobile toggle -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
-                            aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Menu -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="navbar-nav ms-auto align-items-md-center">
-                            <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav.services">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#work" data-i18n="nav.work">Case study</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#process" data-i18n="nav.process">How we work</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
-
-                            <!-- Language toggle -->
-                            <li class="nav-item ms-md-2">
-                                <a href="#" class="nav-link" data-lang-toggle
-                                   data-i18n-attr="aria-label:lang.aria;title:lang.aria"
-                                   aria-label="Cambiar a español" title="Cambiar a español">
-                                    <svg class="icon me-1"><use href="#i-world"/></svg>
-                                    <span data-i18n="lang.switch">ES</span>
-                                </a>
-                            </li>
-
-                            <!-- Theme toggle (visibility handled by Tabler's hide-theme-* classes) -->
-                            <li class="nav-item">
-                                <a href="#" class="nav-link hide-theme-dark" data-theme-set="dark"
-                                   data-i18n-attr="aria-label:theme.dark;title:theme.dark"
-                                   aria-label="Enable dark mode" title="Enable dark mode">
-                                    <svg class="icon"><use href="#i-moon"/></svg>
-                                </a>
-                                <a href="#" class="nav-link hide-theme-light" data-theme-set="light"
-                                   data-i18n-attr="aria-label:theme.light;title:theme.light"
-                                   aria-label="Enable light mode" title="Enable light mode">
-                                    <svg class="icon"><use href="#i-sun"/></svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </header>
-
-            <main id="top">
-
-                <!-- ================= HERO ================= -->
-                <section class="hero">
-                    <div class="container-xl">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="eyebrow" data-i18n="hero.eyebrow">Software support &amp; development for small and mid-sized businesses</div>
-                                <h1 class="hero-title" data-i18n="hero.title">Take back control of your software.</h1>
-                                <p class="hero-subtitle" data-i18n="hero.subtitle">
-                                    We diagnose the systems and web applications your business already runs on, fix what's broken
-                                    and improve what slows you down — without stopping operations.
-                                </p>
-                                <div class="d-flex flex-wrap gap-2 mt-4">
-                                    <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.cta">Let's talk</a>
-                                    <a href="#services" class="btn btn-lg" data-i18n="hero.cta2">See services</a>
-                                </div>
-                                <p class="text-secondary mt-3 mb-0 small" data-i18n="hero.note">Available in English and Spanish.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= PAINS ================= -->
-                <section class="section section-alt" id="pains">
-                    <div class="container-xl">
-                        <h2 class="section-title text-center" data-i18n="pains.title">Sound familiar?</h2>
-                        <div class="row row-cards mt-4">
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <span class="feature-icon bg-red-lt"><svg class="icon"><use href="#i-clock"/></svg></span>
-                                        <h3 class="mt-3" data-i18n="pains.1.title">It's slow</h3>
-                                        <p class="text-secondary mb-0" data-i18n="pains.1.text">Screens that take seconds — or minutes — to load, and a team that waits instead of working.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <span class="feature-icon bg-orange-lt"><svg class="icon"><use href="#i-alert"/></svg></span>
-                                        <h3 class="mt-3" data-i18n="pains.2.title">It keeps breaking</h3>
-                                        <p class="text-secondary mb-0" data-i18n="pains.2.text">Recurring errors, workarounds nobody remembers, and fear of touching anything.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <span class="feature-icon bg-yellow-lt"><svg class="icon"><use href="#i-adjust"/></svg></span>
-                                        <h3 class="mt-3" data-i18n="pains.3.title">It no longer fits</h3>
-                                        <p class="text-secondary mb-0" data-i18n="pains.3.text">The business grew and changed, but the system stayed the same.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="lead text-center mt-5 mb-0" data-i18n="pains.footer">
-                            You don't need to start from scratch. You need someone who understands the whole system.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- ================= SERVICES ================= -->
-                <section class="section" id="services">
-                    <div class="container-xl">
-                        <div class="section-header">
-                            <div class="eyebrow" data-i18n="services.eyebrow">Services</div>
-                            <h2 class="section-title" data-i18n="services.title">What we do</h2>
-                            <p class="text-secondary" data-i18n="services.subtitle">Hands-on work on the software you already have.</p>
-                        </div>
-                        <div class="row row-cards">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-search"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s1.title">Technical diagnosis</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s1.text">A full review of your existing system — code, database, server, security and performance — with clear, prioritized findings.</p>
-                                </div></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-tool"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s2.title">Bug fixing &amp; technical debt</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s2.text">Fix what's failing and clean up what makes every change risky and slow.</p>
-                                </div></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-grid-add"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s3.title">Improvements &amp; new modules</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s3.text">New features built on top of the system you already use — not a replacement.</p>
-                                </div></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-refresh"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s4.title">Gradual modernization</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s4.text">Move legacy applications to a modern API and frontend step by step, with old and new running side by side in production.</p>
-                                </div></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-plug"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s5.title">Integrations</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s5.text">Payment gateways, messaging, IP telephony and third-party software, connected to your system.</p>
-                                </div></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card h-100"><div class="card-body">
-                                    <span class="feature-icon bg-primary-lt"><svg class="icon"><use href="#i-sparkles"/></svg></span>
-                                    <h3 class="mt-3" data-i18n="s6.title">Automation &amp; AI assistants</h3>
-                                    <p class="text-secondary mb-0" data-i18n="s6.text">Automate repetitive processes and add AI assistants where they actually save time.</p>
-                                </div></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= CASE STUDY ================= -->
-                <section class="section section-alt" id="work">
-                    <div class="container-xl">
-                        <div class="section-header">
-                            <div class="eyebrow" data-i18n="work.eyebrow">Case study</div>
-                            <h2 class="section-title" data-i18n="work.title">A group of aesthetic surgery and dental clinics in Florida</h2>
-                            <p class="text-secondary" data-i18n="work.text">
-                                Ongoing support and development for the systems behind the clinics: CRM, billing, payments,
-                                campaigns and patient communication.
-                            </p>
-                        </div>
-
-                        <div class="row row-cards mb-4">
-                            <div class="col-md-4">
-                                <div class="card h-100"><div class="card-body text-center">
-                                    <div class="stat-value">10+</div>
-                                    <div class="text-secondary" data-i18n="stat.1">years building management systems</div>
-                                </div></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100"><div class="card-body text-center">
-                                    <div class="stat-value">500+</div>
-                                    <div class="text-secondary" data-i18n="stat.2">documented changes delivered</div>
-                                </div></div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card h-100"><div class="card-body text-center">
-                                    <div class="stat-value">60s → &lt;2s</div>
-                                    <div class="text-secondary" data-i18n="stat.3">screen load times after optimization</div>
-                                </div></div>
-                            </div>
-                        </div>
-
-                        <div class="card"><div class="card-body">
-                            <ul class="check-list">
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.1">Gradual modernization of a legacy system toward a REST API and a modern frontend, both running in production.</span></li>
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.2">Performance: screens that took 8 to 60 seconds now load in under 2.</span></li>
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.3">Dental module with odontogram, integrated with the clinic's practice management software.</span></li>
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.4">In-house email campaign platform built on AWS.</span></li>
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.5">Check management and printing integrated into the CRM.</span></li>
-                                <li><svg class="icon text-green"><use href="#i-check"/></svg><span data-i18n="work.6">Online payments, messaging, IP telephony, digital advertising and AI assistants.</span></li>
-                            </ul>
-                        </div></div>
-                    </div>
-                </section>
-
-                <!-- ================= PROCESS ================= -->
-                <section class="section" id="process">
-                    <div class="container-xl">
-                        <div class="section-header">
-                            <div class="eyebrow" data-i18n="process.eyebrow">How we work</div>
-                            <h2 class="section-title" data-i18n="process.title">Understand the whole system before touching anything.</h2>
-                        </div>
-                        <div class="row row-cards">
-                            <div class="col-md-4">
-                                <div class="step">
-                                    <div class="step-number">1</div>
-                                    <h3 data-i18n="p1.title">Diagnose</h3>
-                                    <p class="text-secondary" data-i18n="p1.text">Server, database, code and the people who use it. You get a clear picture of what's wrong and what matters most.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="step">
-                                    <div class="step-number">2</div>
-                                    <h3 data-i18n="p2.title">Stabilize</h3>
-                                    <p class="text-secondary" data-i18n="p2.text">Critical failures get fixed first, so the business runs reliably again.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="step">
-                                    <div class="step-number">3</div>
-                                    <h3 data-i18n="p3.title">Improve &amp; modernize</h3>
-                                    <p class="text-secondary" data-i18n="p3.text">Incremental improvements and new modules, delivered without stopping your operation.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= ABOUT ================= -->
-                <section class="section section-alt" id="about">
-                    <div class="container-xl">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="eyebrow" data-i18n="about.eyebrow">About</div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <span class="avatar avatar-lg bg-primary-lt">VC</span>
-                                    <div>
-                                        <h2 class="mb-0">Victor Castro</h2>
-                                        <div class="text-secondary" data-i18n="about.role">Founder, Hormicode LLC · Computer engineer</div>
-                                    </div>
-                                </div>
-                                <p data-i18n="about.p1">
-                                    I'm a computer engineer with more than 10 years developing management systems: CRM, billing,
-                                    inventory, payments, campaigns and customer communication.
-                                </p>
-                                <p data-i18n="about.p2">
-                                    I started in electronics, technical support and networking. That left me with a way of working:
-                                    understand the complete system — server, database, code and the people who use it — before changing anything.
-                                </p>
-                                <a href="https://www.linkedin.com/in/victor-castro-b21327155/" target="_blank" rel="noopener" class="btn">
-                                    <svg class="icon me-2"><use href="#i-linkedin"/></svg>
-                                    <span data-i18n="about.linkedin">Connect on LinkedIn</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ================= CONTACT ================= -->
-                <section class="section" id="contact">
-                    <div class="container-xl">
-                        <div class="card card-lg contact-card">
-                            <div class="card-body text-center">
-                                <h2 class="section-title" data-i18n="contact.title">Is your system slow, failing, or no longer a fit for your business?</h2>
-                                <p class="lead text-secondary" data-i18n="contact.text">Tell us what's going on and we'll get back to you with next steps.</p>
-                                <a href="mailto:hormicodellc@gmail.com?subject=Hormicode%20-%20Project%20inquiry"
-                                   data-i18n-attr="href:contact.mailto"
-                                   class="btn btn-primary btn-lg mt-2">
-                                    <svg class="icon me-2"><use href="#i-mail"/></svg>
-                                    <span data-i18n="contact.cta">Email us</span>
-                                </a>
-                                <div class="mt-3">
-                                    <a href="mailto:hormicodellc@gmail.com" class="text-secondary">hormicodellc@gmail.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
-
-            <!-- ================= FOOTER ================= -->
-            <footer class="footer footer-transparent border-top">
-                <div class="container-xl">
-                    <div class="row text-center text-md-start align-items-center gy-2">
-                        <div class="col-md-6">
-                            <span class="text-secondary">
-                                © 2026 Hormicode LLC. <span data-i18n="footer.rights">All rights reserved.</span>
-                            </span>
-                        </div>
-                        <div class="col-md-6 text-md-end">
-                            <a href="mailto:hormicodellc@gmail.com" class="text-secondary me-3">hormicodellc@gmail.com</a>
-                            <a href="https://www.linkedin.com/in/victor-castro-b21327155/" target="_blank" rel="noopener" class="text-secondary">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
+    <!-- Mock: diagnosis report -->
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><i></i><i></i><i></i><span class="url" data-i18n="mk_url">diagnosis-report</span></div>
+      <div class="mock-body">
+        <div class="mk-head">
+          <div>
+            <div class="mk-k" data-i18n="mk_k">Technical diagnosis</div>
+            <div class="mk-v" data-i18n="mk_v">Your current system</div>
+          </div>
+          <span class="pill b" data-i18n="mk_status">In progress</span>
         </div>
+        <div class="mk-rows">
+          <div class="mk-row"><span class="mk-ic"><svg width="15" height="15"><use href="#i-server"/></svg></span><span data-i18n="mk_r1">Server</span><span class="pill g" data-i18n="mk_ok">Reviewed</span></div>
+          <div class="mk-row"><span class="mk-ic"><svg width="15" height="15"><use href="#i-db"/></svg></span><span data-i18n="mk_r2">Database</span><span class="pill g" data-i18n="mk_ok">Reviewed</span></div>
+          <div class="mk-row"><span class="mk-ic"><svg width="15" height="15"><use href="#i-code"/></svg></span><span data-i18n="mk_r3">Code</span><span class="pill g" data-i18n="mk_ok">Reviewed</span></div>
+          <div class="mk-row"><span class="mk-ic"><svg width="15" height="15"><use href="#i-shield"/></svg></span><span data-i18n="mk_r4">Security</span><span class="pill a" data-i18n="mk_review">Reviewing</span></div>
+          <div class="mk-row"><span class="mk-ic"><svg width="15" height="15"><use href="#i-gauge"/></svg></span><span data-i18n="mk_r5">Performance</span><span class="pill a" data-i18n="mk_review">Reviewing</span></div>
+        </div>
+        <div class="perf">
+          <div class="perf-k" data-i18n="mk_perf">Screen load time — real case</div>
+          <div class="perf-row"><span class="perf-l" data-i18n="mk_before">Before</span><div class="perf-bar"><i class="bad"></i></div><span class="perf-n">8–60 s</span></div>
+          <div class="perf-row"><span class="perf-l" data-i18n="mk_after">After</span><div class="perf-bar"><i class="good"></i></div><span class="perf-n good-t">&lt; 2 s</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Tabler JS -->
-        <script src="assets/tabler/tabler.min.js"></script>
-        <script src="js/i18n.js"></script>
-        <script src="js/main.js"></script>
+<!-- ============ PAINS ============ -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="pain_eyebrow">Sound familiar?</span>
+      <h2 data-i18n="pain_title">When the software starts slowing the business down</h2>
+    </div>
+    <div class="cols-3">
+      <div class="sym">
+        <div class="ico warn"><svg width="26" height="26"><use href="#i-clock"/></svg></div>
+        <h3 data-i18n="pain1_t">It's slow</h3>
+        <p data-i18n="pain1_d">Screens that take seconds — or minutes — to load, and a team that waits instead of working.</p>
+      </div>
+      <div class="sym">
+        <div class="ico warn"><svg width="26" height="26"><use href="#i-alert"/></svg></div>
+        <h3 data-i18n="pain2_t">It keeps breaking</h3>
+        <p data-i18n="pain2_d">Recurring errors, workarounds nobody remembers, and fear of touching anything.</p>
+      </div>
+      <div class="sym">
+        <div class="ico warn"><svg width="26" height="26"><use href="#i-sliders"/></svg></div>
+        <h3 data-i18n="pain3_t">It no longer fits</h3>
+        <p data-i18n="pain3_d">The business grew and changed, but the system stayed the same.</p>
+      </div>
+    </div>
+    <p class="pain-foot" data-i18n="pain_foot">You don't need to start from scratch. You need someone who understands <strong>the whole system</strong>.</p>
+  </div>
+</section>
 
-    </body>
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="srv_eyebrow">Services</span>
+      <h2 data-i18n="srv_title">What we do with the system you already have</h2>
+      <p data-i18n="srv_lead">Hands-on work on your current software — from a one-time diagnosis to ongoing support and development.</p>
+    </div>
+    <div class="modules">
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-search"/></svg></div><h3 data-i18n="s1_t">Technical diagnosis</h3><p data-i18n="s1_d">A full review of your system — code, database, server, security and performance — with clear, prioritized findings.</p></div>
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-wrench"/></svg></div><h3 data-i18n="s2_t">Bug fixing &amp; technical debt</h3><p data-i18n="s2_d">Fix what's failing and clean up what makes every change risky and slow.</p></div>
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-plus"/></svg></div><h3 data-i18n="s3_t">Improvements &amp; new modules</h3><p data-i18n="s3_d">New features built on top of the system you already use — not a replacement.</p></div>
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-refresh"/></svg></div><h3 data-i18n="s4_t">Gradual modernization</h3><p data-i18n="s4_d">Move legacy applications to a modern API and frontend step by step, without starting over.</p></div>
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-plug"/></svg></div><h3 data-i18n="s5_t">Integrations</h3><p data-i18n="s5_d">Payment gateways, messaging, IP telephony and third-party software, connected to your system.</p></div>
+      <div class="module"><div class="ico"><svg width="22" height="22"><use href="#i-bot"/></svg></div><h3 data-i18n="s6_t">Automation &amp; AI assistants</h3><p data-i18n="s6_d">Automate repetitive processes and add AI assistants where they actually save time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE STUDY ============ -->
+<section class="alt-bg" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="work_eyebrow">Case study</span>
+      <h2 data-i18n="work_title">A group of aesthetic surgery and dental clinics in Florida</h2>
+      <p data-i18n="work_lead">Ongoing support and development for the systems behind the clinics: CRM, billing, payments, campaigns and patient communication.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n grad">500+</div><div class="l" data-i18n="st1">documented changes</div></div>
+      <div class="stat"><div class="n grad">&lt; 2 s</div><div class="l" data-i18n="st2">load time, down from 8–60 s</div></div>
+      <div class="stat"><div class="n grad">10+</div><div class="l" data-i18n="st3">years building management systems</div></div>
+    </div>
+
+    <!-- Modernization -->
+    <div class="frow">
+      <div class="ftext">
+        <span class="eyebrow" data-i18n="f1_eyebrow">Gradual modernization</span>
+        <h3 data-i18n="f1_title">Modern and legacy, running side by side</h3>
+        <p data-i18n="f1_lead">Instead of a risky rewrite, the legacy system is moving step by step toward a REST API and a modern frontend. Both live in production, so the clinics keep working.</p>
+        <ul class="flist">
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f1_b1">New REST API over the existing data</span></li>
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f1_b2">Modern frontend, screen by screen</span></li>
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f1_b3">Every change documented</span></li>
+        </ul>
+      </div>
+      <div class="fvisual">
+        <div class="arch">
+          <div class="arch-node old">
+            <span class="an-ic"><svg width="20" height="20"><use href="#i-server"/></svg></span>
+            <div><div class="an-t" data-i18n="ar_old">Legacy system</div><div class="an-s" data-i18n="ar_old_s">Still serving users</div></div>
+          </div>
+          <div class="arch-link"></div>
+          <div class="arch-node core">
+            <span class="an-ic"><svg width="20" height="20"><use href="#i-db"/></svg></span>
+            <div><div class="an-t" data-i18n="ar_api">REST API</div><div class="an-s" data-i18n="ar_api_s">Same business data</div></div>
+          </div>
+          <div class="arch-link"></div>
+          <div class="arch-node new">
+            <span class="an-ic"><svg width="20" height="20"><use href="#i-code"/></svg></span>
+            <div><div class="an-t" data-i18n="ar_new">Modern frontend</div><div class="an-s" data-i18n="ar_new_s">Faster, easier to change</div></div>
+          </div>
+          <div class="arch-badge"><svg width="14" height="14"><use href="#i-check"/></svg><span data-i18n="ar_badge">Both in production</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivered -->
+    <div class="frow rev">
+      <div class="ftext">
+        <span class="eyebrow" data-i18n="f2_eyebrow">What we've built</span>
+        <h3 data-i18n="f2_title">Modules and integrations for day-to-day operation</h3>
+        <p data-i18n="f2_lead">Beyond fixing and speeding things up, we build what the clinics need next — connected to the system they already use.</p>
+        <ul class="flist">
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f2_b1">Screens that took 8 to 60 seconds now load in under 2</span></li>
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f2_b2">Dental module with odontogram, integrated with the clinic's practice management software</span></li>
+          <li><span class="ck"><svg width="13" height="13"><use href="#i-check"/></svg></span><span data-i18n="f2_b3">In-house email campaign platform on AWS</span></li>
+        </ul>
+      </div>
+      <div class="fvisual">
+        <div class="tiles">
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-steth"/></svg></span><span data-i18n="t1">Dental odontogram</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-cloud"/></svg></span><span data-i18n="t2">Email campaigns · AWS</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-printer"/></svg></span><span data-i18n="t3">Check printing in the CRM</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-card"/></svg></span><span data-i18n="t4">Online payments</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-chat"/></svg></span><span data-i18n="t5">Messaging</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-phone"/></svg></span><span data-i18n="t6">IP telephony</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-trend"/></svg></span><span data-i18n="t7">Digital advertising</span></div>
+          <div class="tile"><span class="t-ic"><svg width="18" height="18"><use href="#i-bot"/></svg></span><span data-i18n="t8">AI assistants</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="pr_eyebrow">How we work</span>
+      <h2 data-i18n="pr_title">Understand the whole system before touching anything</h2>
+      <p data-i18n="pr_lead">Server, database, code and the people who use it. That's where every project starts.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <h3 data-i18n="p1_t">Diagnose</h3>
+        <p data-i18n="p1_d">We review the full system and give you a clear picture: what's wrong, what's at risk and what matters most.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <h3 data-i18n="p2_t">Stabilize</h3>
+        <p data-i18n="p2_d">Critical failures get fixed first, so the business runs reliably again.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <h3 data-i18n="p3_t">Improve &amp; modernize</h3>
+        <p data-i18n="p3_d">Incremental improvements and new modules, delivered without stopping your operation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="alt-bg" id="about">
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow" data-i18n="ab_eyebrow">Behind Hormicode</span>
+      <h2>Victor Castro</h2>
+      <p class="about-role" data-i18n="ab_role">Founder · Computer engineer</p>
+      <p data-i18n="ab_p1">More than 10 years developing management systems: CRM, billing, inventory, payments, campaigns and customer communication.</p>
+      <p data-i18n="ab_p2">I started in electronics, technical support and networking. That left me with a way of working: understand the complete system — server, database, code and the people who use it — before changing anything.</p>
+      <a href="https://www.linkedin.com/in/victor-castro-b21327155/" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg width="17" height="17"><use href="#i-linkedin"/></svg><span data-i18n="ab_linkedin">View LinkedIn profile</span>
+      </a>
+    </div>
+    <ol class="path">
+      <li><span class="dot"></span><div><div class="pt" data-i18n="path1_t">Electronics &amp; technical support</div><div class="ps" data-i18n="path1_s">Hardware, repair and troubleshooting</div></div></li>
+      <li><span class="dot"></span><div><div class="pt" data-i18n="path2_t">Networks</div><div class="ps" data-i18n="path2_s">Infrastructure and servers</div></div></li>
+      <li><span class="dot"></span><div><div class="pt" data-i18n="path3_t">Management systems · 10+ years</div><div class="ps" data-i18n="path3_s">CRM, billing, inventory, payments</div></div></li>
+      <li class="now"><span class="dot"></span><div><div class="pt">Hormicode LLC</div><div class="ps" data-i18n="path4_s">Support &amp; development for small and mid-sized businesses</div></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="faq_eyebrow">FAQ</span>
+      <h2 data-i18n="faq_title">Common questions</h2>
+    </div>
+    <div class="faq">
+      <details class="qa"><summary><span data-i18n="q1">Do I have to replace my current system?</span><span class="plus">+</span></summary><p data-i18n="a1">No. Our focus is to repair, improve and modernize what you already have. A rewrite from scratch is expensive and risky; we only recommend it when it truly makes sense.</p></details>
+      <details class="qa"><summary><span data-i18n="q2">Can you work on a system someone else built?</span><span class="plus">+</span></summary><p data-i18n="a2">Yes — that's most of our work. We start with a diagnosis to understand the code, the database and the server before making changes.</p></details>
+      <details class="qa"><summary><span data-i18n="q3">Will my business have to stop while you work?</span><span class="plus">+</span></summary><p data-i18n="a3">No. Changes are planned and delivered gradually so the operation keeps running.</p></details>
+      <details class="qa"><summary><span data-i18n="q4">Do you work in English and Spanish?</span><span class="plus">+</span></summary><p data-i18n="a4">Yes. You can talk to us and receive documentation in either language.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div>
+        <span class="eyebrow" data-i18n="ct_eyebrow">Let's talk</span>
+        <h2 data-i18n="ct_title">Is your system slow, failing, or no longer a fit for your business?</h2>
+        <p class="lead" data-i18n="ct_lead">Tell us what's going on — what the system does, what hurts and what you'd like to change. We'll reply with next steps.</p>
+      </div>
+      <div class="contact-methods">
+        <a href="mailto:hormicodellc@gmail.com?subject=Hormicode%20-%20Project%20inquiry" data-i18n-attr="href:ct_mailto" class="cm">
+          <div class="ic"><svg width="22" height="22"><use href="#i-mail"/></svg></div>
+          <div>
+            <div class="lbl" data-i18n="ct_email">Email us</div>
+            <div class="val">hormicodellc@gmail.com</div>
+            <div class="sub" data-i18n="ct_email_sub">English or Spanish</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/victor-castro-b21327155/" target="_blank" rel="noopener" class="cm">
+          <div class="ic"><svg width="22" height="22"><use href="#i-linkedin"/></svg></div>
+          <div>
+            <div class="lbl">LinkedIn</div>
+            <div class="val">Victor Castro</div>
+            <div class="sub" data-i18n="ct_li_sub">Send a message or connect</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-grid">
+    <a href="#top" class="logo logo-full" aria-label="Hormicode">
+      <img src="assets/img/hormicode-logo.svg" alt="HCode — Hormicode" class="logo-img on-light" width="134" height="48">
+      <img src="assets/img/hormicode-logo-white.svg" alt="HCode — Hormicode" class="logo-img on-dark" width="134" height="48">
+    </a>
+    <div class="foot-links">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#work" data-i18n="nav_work">Case study</a>
+      <a href="#process" data-i18n="nav_process">How we work</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div>© 2026 Hormicode LLC · hormicode.com</div>
+  </div>
+</footer>
+
+<script src="js/i18n.js?v=3"></script>
+</body>
 </html>
