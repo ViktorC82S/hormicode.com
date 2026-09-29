@@ -35,7 +35,7 @@
         hero_title: 'Recupera el control<br>de <span class="grad">tu software.</span>',
         hero_lead: 'Diagnosticamos los sistemas y aplicaciones web que tu empresa ya usa, reparamos lo que falla y mejoramos lo que frena la operación, sin detener el negocio.',
         hero_cta1: 'Cuéntanos sobre tu sistema', hero_cta2: 'Ver servicios',
-        trust1: 'Más de 10 años desarrollando sistemas de gestión', trust2: 'Sin empezar de cero', trust3: 'Inglés y español',
+        trust1: 'Más de 10 años desarrollando sistemas de gestión', trust2: 'Sin empezar de cero',
 
         mk_url: 'reporte-diagnostico', mk_k: 'Diagnóstico técnico', mk_v: 'Tu sistema actual', mk_status: 'En curso',
         mk_r1: 'Servidor', mk_r2: 'Base de datos', mk_r3: 'Código', mk_r4: 'Seguridad', mk_r5: 'Rendimiento',
@@ -108,13 +108,11 @@
         a2: 'Sí, es la mayor parte de nuestro trabajo. Empezamos con un diagnóstico para entender el código, la base de datos y el servidor antes de hacer cambios.',
         q3: '¿Mi negocio tiene que detenerse mientras trabajan?',
         a3: 'No. Los cambios se planifican y se entregan de forma gradual para que la operación siga funcionando.',
-        q4: '¿Trabajan en inglés y español?',
-        a4: 'Sí. Puedes hablar con nosotros y recibir la documentación en cualquiera de los dos idiomas.',
 
         ct_eyebrow: 'Conversemos',
         ct_title: '¿Tu sistema es lento, falla o ya no se adapta a tu negocio?',
         ct_lead: 'Cuéntanos qué está pasando: qué hace el sistema, qué duele y qué te gustaría cambiar. Te respondemos con los próximos pasos.',
-        ct_email: 'Escríbenos', ct_email_sub: 'En español o inglés',
+        ct_email: 'Escríbenos', ct_email_sub: 'Cuéntanos sobre tu proyecto',
         ct_li_sub: 'Envía un mensaje o conecta',
         ct_mailto: 'mailto:hormicodellc@gmail.com?subject=Hormicode%20-%20Consulta%20de%20proyecto'
     };
