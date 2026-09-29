@@ -1,49 +1,182 @@
 /*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
-*/
-/* 
-    Created on : Dec 17, 2025, 8:31:39 PM
+    Created on : Dec 17, 2025, 8:31:39 PM
     Author     : victor castro
+
+    Landing styles on top of Tabler. Colors come from Tabler's --tblr-* variables,
+    so everything adapts to light/dark mode automatically.
 */
 
-html, body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
-.page {
+/* Keep section titles visible below the sticky navbar */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+/* ================= BRAND (text logo placeholder) ================= */
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+}
+
+/* ================= ICONS ================= */
+svg.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--tblr-border-radius-lg);
+}
+
+.feature-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--tblr-bg-surface);
+  border-block: 1px solid var(--tblr-border-color);
+}
+
+.section-header {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.eyebrow {
+  color: var(--tblr-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 6rem 0 5rem;
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(var(--tblr-primary-rgb), 0.14), transparent 70%);
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--tblr-secondary);
+  max-width: 40rem;
+}
+
+/* ================= CASE STUDY ================= */
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--tblr-primary);
+  line-height: 1.2;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.check-list li {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  gap: 0.75rem;
+  align-items: flex-start;
 }
 
-.page-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0; /* MUY IMPORTANTE */
+.check-list .icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
 }
 
-.page-body {
-  flex: 1;
-  overflow-y: auto;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+@media (min-width: 992px) {
+  .check-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
 }
 
-/* Dark mode toggle: icon-only style */
-#theme-toggle {
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  line-height: 1;
+/* ================= PROCESS ================= */
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--tblr-primary);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-#theme-toggle:hover,
-#theme-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.05);
+/* ================= CONTACT ================= */
+.contact-card {
+  border-color: rgba(var(--tblr-primary-rgb), 0.35);
+  background:
+    radial-gradient(40rem 20rem at 50% 0%, rgba(var(--tblr-primary-rgb), 0.12), transparent 70%),
+    var(--tblr-bg-surface);
 }
 
-[data-bs-theme="dark"] #theme-toggle:hover,
-[data-bs-theme="dark"] #theme-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.08);
+.contact-card .section-title {
+  max-width: 36rem;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .container-xl {
+    padding-inline: 1rem;
+  }
 }

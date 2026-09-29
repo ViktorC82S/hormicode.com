@@ -1,44 +1,45 @@
 /**
  * @description Theme Handler
- * 
+ *
+ * Loaded in <head> (not deferred) so the theme is applied before the first paint.
+ * Uses the saved choice, or the OS preference if the user never chose one.
+ * Toggle visibility is handled by Tabler's .hide-theme-dark / .hide-theme-light classes.
+ *
  * @author Victor Castro
- * 
- * @version 1.0 01/12/2026
+ *
+ * @version 1.1 09/28/2026
  * @since   1.0 01/12/2026
  */
 
-
 (function () {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const STORAGE_KEY = 'hormicode-theme';
     const root = document.documentElement;
 
-    function setTheme(theme) {
+    function getSavedTheme() {
+        try {
+            return localStorage.getItem(STORAGE_KEY);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function setTheme(theme, persist) {
         root.setAttribute('data-bs-theme', theme);
-        localStorage.setItem(STORAGE_KEY, theme);
-        updateVisibility(theme);
+        if (persist) {
+            try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) { /* storage unavailable */ }
+        }
     }
 
-    function updateVisibility(theme) {
-        document.querySelectorAll('.hide-theme-dark')
-            .forEach(el => el.style.display = theme === 'dark' ? 'none' : 'inline-flex');
+    // Restaurar tema guardado o usar el del sistema
+    const saved = getSavedTheme();
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    setTheme(saved === 'light' || saved === 'dark' ? saved : systemTheme, false);
 
-        document.querySelectorAll('.hide-theme-light')
-            .forEach(el => el.style.display = theme === 'light' ? 'none' : 'inline-flex');
-    }
-
-    // Restaurar tema guardado
-    const savedTheme = localStorage.getItem(STORAGE_KEY) || 'dark';
-    setTheme(savedTheme);
-
-    // Eventos
-    document.getElementById('btn-dark')?.addEventListener('click', e => {
+    // Eventos (delegados: los botones aún no existen cuando corre este script)
+    document.addEventListener('click', e => {
+        const btn = e.target.closest('[data-theme-set]');
+        if (!btn) return;
         e.preventDefault();
-        setTheme('dark');
-    });
-
-    document.getElementById('btn-light')?.addEventListener('click', e => {
-        e.preventDefault();
-        setTheme('light');
+        setTheme(btn.dataset.themeSet, true);
     });
 })();

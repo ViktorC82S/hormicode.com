@@ -1,30 +1,20 @@
+/**
+ * @description General UI behavior
+ *
+ * @author Victor Castro
+ *
+ * @version 1.0 09/28/2026
+ * @since   1.0 09/28/2026
+ */
+
 (function () {
-  const STORAGE_KEY = 'theme';
-  const toggle = document.getElementById('theme-toggle');
-  const iconMoon = document.getElementById('icon-moon');
-  const iconSun  = document.getElementById('icon-sun');
+    // Cerrar el menú móvil al elegir una sección
+    const menu = document.getElementById('navbar-menu');
+    const toggler = document.querySelector('.navbar-toggler');
 
-  function setTheme(theme) {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-    localStorage.setItem(STORAGE_KEY, theme);
-
-    iconMoon.classList.toggle('d-none', theme === 'dark');
-    iconSun.classList.toggle('d-none', theme === 'light');
-  }
-
-  // sync icons on load
-  const current = document.documentElement.getAttribute('data-bs-theme');
-  setTheme(current);
-
-  toggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    const theme =
-      document.documentElement.getAttribute('data-bs-theme') === 'dark'
-        ? 'light'
-        : 'dark';
-
-    setTheme(theme);
-  });
+    menu?.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+            if (menu.classList.contains('show')) toggler?.click();
+        });
+    });
 })();
-
-
