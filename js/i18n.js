@@ -41,6 +41,7 @@
         mk_r1: 'Servidor', mk_r2: 'Base de datos', mk_r3: 'Código', mk_r4: 'Seguridad', mk_r5: 'Rendimiento',
         mk_ok: 'Revisado', mk_review: 'En revisión',
         mk_perf: 'Tiempo de carga — caso real', mk_before: 'Antes', mk_after: 'Después',
+        mk_slow: 'Lento', mk_fast: 'Rápido',
 
         pain_eyebrow: '¿Te suena familiar?',
         pain_title: 'Cuando el software empieza a frenar el negocio',
@@ -62,7 +63,7 @@
         work_eyebrow: 'Caso real',
         work_title: 'Un grupo de clínicas de cirugía estética y odontología en Florida',
         work_lead: 'Soporte y desarrollo continuo de los sistemas de las clínicas: CRM, facturación, pagos, campañas y comunicación con pacientes.',
-        st1: 'cambios documentados', st2: 'de carga, antes entre 8 y 60 s', st3: 'años desarrollando sistemas de gestión',
+        st1: 'cambios documentados', st2: 'canales atendidos por el agente de IA: SMS, Instagram y teléfono', st3: 'años desarrollando sistemas de gestión',
 
         f1_eyebrow: 'Modernización gradual',
         f1_title: 'Lo nuevo y lo heredado, funcionando a la vez',
@@ -76,11 +77,12 @@
         f2_eyebrow: 'Lo que hemos construido',
         f2_title: 'Módulos e integraciones para la operación diaria',
         f2_lead: 'Además de reparar y acelerar, construimos lo que las clínicas necesitan, conectado al sistema que ya usan.',
-        f2_b1: 'Pantallas que tardaban entre 8 y 60 segundos ahora cargan en menos de 2',
+        f2_b1: 'Agente de atención al cliente con IA que atiende a pacientes y leads por SMS, Instagram y teléfono',
         f2_b2: 'Módulo dental con odontograma, integrado con el software de gestión de la clínica',
         f2_b3: 'Plataforma propia de campañas de email sobre AWS',
+        f2_b4: 'Aumento significativo del rendimiento en los módulos de mayor uso',
         t1: 'Odontograma dental', t2: 'Campañas de email · AWS', t3: 'Impresión de cheques en el CRM', t4: 'Pagos en línea',
-        t5: 'Mensajería', t6: 'Telefonía IP', t7: 'Publicidad digital', t8: 'Asistentes con IA',
+        t5: 'Mensajería', t6: 'Telefonía IP', t7: 'Publicidad digital', t8: 'Agente de atención con IA',
 
         pr_eyebrow: 'Cómo trabajamos',
         pr_title: 'Entender el sistema completo antes de tocar nada',
